@@ -10,3 +10,6 @@ so, here is the way to use our handle:
 
 3.when start the serve, give our own handler
 
+// a new kind of serve:use Server and mine mux to complete the http server
+
+// mux is a map.map the url to the certain func handle
