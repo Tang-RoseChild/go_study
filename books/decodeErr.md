@@ -93,12 +93,11 @@ func decodeUintReader(r io.Reader, buf []byte) (x uint64, width int, err error) 
 
 ```
 >重要的就是上面的三个.可能是调用了read之后，文件的位置发生了变化或者是buffer size发生了变化；具体是怎么回事的话，目前没经历和能力去处理  
-* 苦逼的搜索后([连接](http://comments.gmane.org/gmane.comp.lang.go.general/44484))，得到了一个笼统的回答：
+* 苦逼的搜索后([连接](http://comments.gmane.org/gmane.comp.lang.go.general/44484))，得到了一个笼统的回答:  
 >On Mon, Nov 14, 2011 at 10:08 AM, Rob 'Commander' Pike <r <at> golang.org> wrote:
 >The problem is that without special effort you cannot use two
 >instantiations of gob.Encoder to write successively to the same file
->and then decode it with gob.Decoder.
->
+>and then decode it with gob.Decoder.  
 >-rob
 
 #### 最后：
