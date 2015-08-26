@@ -102,3 +102,8 @@ func decodeUintReader(r io.Reader, buf []byte) (x uint64, width int, err error) 
 
 #### 最后：
 和<< the way to go >>中shorturl类似的一个的练习，将gob改成了json，[链接戳这](https://github.com/nf/goto/commit/16269b8a90b00b7e12331f6632526195b8c3a19f#diff-2)
+
+---------------------------------------------------------------------------------------------------------------------------
+崩溃。。。书中"P527--19.7 Using json for storage"有如下描述:
+>This is because gob is a stream based protocol that doesn’t support restarting.
+解释了上面那个问题。。。
