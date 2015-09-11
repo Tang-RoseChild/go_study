@@ -1,0 +1,15 @@
+use our own handle:
+so, here is the way to use our handle:
+1.fisrt,to get a ServerMux --> http.NewServeMux
+  func (mux *ServeMux) Handle(pattern string, handler Handler) 
+
+2.define our own handler,through the document,the interface need to implement ServeHTTP func
+  type Handler interface {
+    ServeHTTP(ResponseWriter, *Request)
+	}
+
+3.when start the serve, give our own handler
+
+// a new kind of serve:use Server and mine mux to complete the http server
+
+// mux is a map.map the url to the certain func handle
